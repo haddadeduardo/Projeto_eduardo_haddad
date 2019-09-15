@@ -15,6 +15,7 @@ class A{
 		void setA1(int a);
 		void setA2(float b);
 		void imprimeNomeClasse();
+		void MA3();
 };
 
 A::A(int a,float b){
@@ -49,6 +50,9 @@ void A::setA2(float b){
 	cout << "setA2" << endl;
 }
 
+void A::MA3(){
+	cout << "Alteração a classe A partir do clone" << endl;
+}
 
 class B{
 	private:
@@ -61,7 +65,6 @@ class B{
 		float getB2();
 		void setB1(int a);
 		void setB2(float b);
-	
 };
 
 B::B(int a, float b){
@@ -96,16 +99,50 @@ void B::setB2(float b){
 	cout << "setB2" << endl;
 }
 
+class C{
+	private:
+		string c1;
+		int c2;
+	public:
+		C(string c1, int c2);
+		~C();
+		void MC1();
+		void MC2();
+};
+
+C::C(string C1, int C2){
+	c1 = C1;
+	c2 = C2;
+	cout << "Construtor C" << endl;
+}
+
+C::~C(){
+	c1 = "VAZIO";
+	c2 = -1;
+	cout << "Destructor C" << endl;
+}
+
+void C::MC1(){
+	cout << "MC1" << endl;
+}
+
+void C::MC2(){
+	cout << "MC2" << endl;
+}
+
 int main()
 {
 	int a1, b1, aa1, bb1;
 	float a2, b2, aa2, bb2;
+	string c1;
+	int c2;
 	
 	cin >> a1 >> a2;
 	cin >> b1 >> b2;
 	
 	A a(a1, a2);
 	B b(b1, b2);
+	C c(c1, c2);
 
 	
 	aa1 = a.getA1();
@@ -121,4 +158,8 @@ int main()
 	b.setB2(bb2 * 4);
 	b.getB1();
 	b.getB2();
+	
+	
+	c.MC1();
+	c.MC2();
 }

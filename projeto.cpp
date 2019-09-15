@@ -16,6 +16,7 @@ class A{
 		void setA2(float b);
 		void imprimeNomeClasse();
 		void MA3();
+		
 };
 
 A::A(int a,float b){

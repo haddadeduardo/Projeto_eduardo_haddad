@@ -66,6 +66,7 @@ class B{
 		float getB2();
 		void setB1(int a);
 		void setB2(float b);
+		void MB3();
 };
 
 B::B(int a, float b){
@@ -100,6 +101,10 @@ void B::setB2(float b){
 	cout << "setB2" << endl;
 }
 
+void B:: MB3(){
+	cout << "MB3" << endl;
+}
+
 class C{
 	private:
 		string c1;
@@ -109,6 +114,7 @@ class C{
 		~C();
 		void MC1();
 		void MC2();
+		void MC3();
 };
 
 C::C(string C1, int C2){
@@ -130,6 +136,38 @@ void C::MC1(){
 void C::MC2(){
 	cout << "MC2" << endl;
 }
+
+void C:: MC3(){
+	cout << "MC3" << endl;
+}
+
+class D{
+	private:
+		int D1, D2;
+	public:
+		D();
+		~D();
+		void MD1();
+		void MD2();
+};
+
+D::D(){
+	cout << "Construtor D" << endl;
+}
+
+D::~D(){
+	cout << "Destrutor D" << endl;
+}
+
+void D::MD1(){
+	cout << "MD1" << endl;
+}
+
+void D::MD2(){
+	cout << "MD2" << endl;
+}
+
+
 
 int main()
 {

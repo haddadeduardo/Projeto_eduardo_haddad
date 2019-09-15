@@ -150,6 +150,7 @@ class D{
 		void MD1();
 		void MD2();
 		void MD3();
+		void MD4();
 };
 
 D::D(){
@@ -170,6 +171,10 @@ void D::MD2(){
 
 void D::MD3(){
 	cout << "MD3" << endl;
+}
+
+void D::MD4(){
+	cout << "MD4" << endl;
 }
 
 int main()
